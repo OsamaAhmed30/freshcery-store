@@ -1,0 +1,141 @@
+  <section id="meats">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title">Meats</h2>
+                        <div class="product-carousel owl-carousel">
+                        <?php foreach($mostProducts as $product):?>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until <?php echo $product->exp_date ?>
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                <?php echo round(calcDiscount($product->old_price,$product->new_price)) ?>% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/meats.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product.html"><?php echo $product->name ?></a>
+                                        </h4>
+                                        <div class="card-price">
+                                            <span class="discount"><?php echo $product->old_price ?> EGP</span>
+                                            <span class="reguler"> <?php echo $product->new_price ?> EGP</span>
+                                        </div>
+                                        <a href="detail-product.html" class="btn btn-block btn-primary">
+                                            Add to Cart
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fishes" class="gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title">Fishes</h2>
+                        <div class="product-carousel owl-carousel">
+                        <?php foreach($mostProducts as $product):?>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until <?php echo $product->exp_date ?>
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                <?php echo round(calcDiscount($product->old_price,$product->new_price)) ?>% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/meats.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product.html"><?php echo $product->name ?></a>
+                                        </h4>
+                                        <div class="card-price">
+                                            <span class="discount"><?php echo $product->old_price ?> EGP</span>
+                                            <span class="reguler"> <?php echo $product->new_price ?> EGP</span>
+                                        </div>
+                                        <a href="detail-product.html" class="btn btn-block btn-primary">
+                                            Add to Cart
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fruits">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="title">Fruits</h2>
+                        <div class="product-carousel owl-carousel">
+                        <?php foreach($mostProducts as $product):?>
+                            <div class="item">
+                                <div class="card card-product">
+                                    <div class="card-ribbon">
+                                        <div class="card-ribbon-container right">
+                                            <span class="ribbon ribbon-primary">SPECIAL</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-badge">
+                                        <div class="card-badge-container left">
+                                            <span class="badge badge-default">
+                                                Until <?php echo $product->exp_date ?>
+                                            </span>
+                                            <span class="badge badge-primary">
+                                                <?php echo round(calcDiscount($product->old_price,$product->new_price)) ?>% OFF
+                                            </span>
+                                        </div>
+                                        <img src="assets/img/meats.jpg" alt="Card image 2" class="card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">
+                                            <a href="detail-product.html"><?php echo $product->name ?></a>
+                                        </h4>
+                                        <div class="card-price">
+                                            <span class="discount"><?php echo $product->old_price ?> EGP</span>
+                                            <span class="reguler"> <?php echo $product->new_price ?> EGP</span>
+                                        </div>
+                                        <a href="detail-product.html" class="btn btn-block btn-primary">
+                                            Add to Cart
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
