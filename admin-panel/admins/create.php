@@ -31,9 +31,9 @@
           }
             
             //check email existing
-            $login = $conn->query("SELECT * FROM admins WHERE  email = '$email'");
-            $login->execute();
-            $user = $login->fetch(PDO::FETCH_ASSOC);
+            $checkExistEmail = $conn->query("SELECT * FROM admins WHERE  email = '$email'");
+            $checkExistEmail->execute();
+            $user = $checkExistEmail->fetch(PDO::FETCH_ASSOC);
 
             if($user){
                 echo "<script>window.onload=function(){
