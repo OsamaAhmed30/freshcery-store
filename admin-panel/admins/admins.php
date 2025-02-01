@@ -30,7 +30,7 @@
                   <?php foreach($admins as $admin):?>
                     <tr>
                     <td class="align-middle"><?php echo $admin->id?></td>
-                    <td class="w-auto"><img class="avatar-header" src="<?php echo ROOTURL."/assets/img/user/". $admin->image?>"/></td>
+                    <td class="w-auto"><img class="rounded-circle" width="70px" height="70px" src="<?php echo ROOTURL."/assets/img/user/". $admin->image?>"/></td>
                     <td class="align-middle"><?php echo $admin->username?></td>
                     <td class="align-middle"><?php echo $admin->email?></td>
                     <td class="align-middle"><?php echo $admin->fullname?></td>
