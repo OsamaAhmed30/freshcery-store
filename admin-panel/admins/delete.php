@@ -17,7 +17,10 @@
                     session_unset();
                     session_destroy();
                 }
-                
+                $getAdmin = $conn->query("SELECT image FROM admins WHERE id = '$id'");
+                $getAdmin->execute();
+                $admin= $getAdmin->fetch(PDO::FETCH_OBJ);
+                unlink($_SERVER['DOCUMENT_ROOT'] ."/Freshcery/assets/img/user/".$admin->image);
             
              $conn->exec("DELETE FROM admins WHERE id='$id'");
             }
