@@ -181,7 +181,6 @@
                     e.preventDefault();
                     var quantity = $(this).closest("form").find("input[name='quantity']").val();
                     var pro_id = $(this).closest("form").find("input[name='id']").val();
-                    console.log(e);
                     
                        $.ajax({
                         type: "POST",
@@ -193,13 +192,11 @@
                         },
                         success: function(response) {
                             
-                            console.log("response : " , response);
                             $.ajax({
                             type: "get",
                             url: "cart_count.php",
                             success: function(carts_count) {
                             
-                            //console.log("response : " , carts_count);
                             console.log( $("#cart_count").text());
                             
                             $("#cart_count").text(carts_count)

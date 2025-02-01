@@ -10,9 +10,7 @@
      $getProductDetails->execute();
      $product_details=$getProductDetails->fetch(PDO::FETCH_OBJ);
 
-     //print_r($product_details->new_price);
-     //echo ($product_details->new_price);
-
+    
     //related_products
      $getRelatedProducts =$conn->query("SELECT * FROM Products WHERE category_id = '$product_details->category_id' AND status = 1 AND id != '$product_details->id'");
      $getRelatedProducts->execute();

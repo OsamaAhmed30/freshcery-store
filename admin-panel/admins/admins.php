@@ -56,8 +56,6 @@
 $(".btn-delete").on('click', function(e) {                        
                         var id = $(this).val();
                         var this_e = $(this)
-                        console.log(id);
-                        console.log(this_e);
                         
                       $.ajax({
                         type: "POST",
