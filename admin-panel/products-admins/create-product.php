@@ -31,7 +31,16 @@
                $image ='product.svg';
          }
            else{
-             $image=$_FILES['image']['name'];
+              $target_dir = $_SERVER['DOCUMENT_ROOT'] ."/Freshcery/assets/img/";
+              $target_file = $target_dir . basename($_FILES["image"]["name"]);
+              $uploadOk = 1;
+              $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+              $check = getimagesize($_FILES["image"]["tmp_name"]);
+              if($check !== false) {
+                if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)){
+                  $image=$_FILES['image']['name'];
+                }
+              } 
            }
            $insert = $conn->prepare("INSERT INTO products(name,quantity,old_price,new_price,category_id,exp_date,status,description, image) VALUES (:name,:quantity,:old_price,:new_price,:category_id,:exp_date,:status , :description ,:image)");
           $insert->execute([
